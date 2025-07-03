@@ -136,6 +136,17 @@
 
  <section id="contacto" class="contacto-mejorado">
   <h2>Contáctanos</h2>
+  <form action="https://formspree.io/f/mqabjbdo" method="POST">
+  <input type="text" name="nombre" placeholder="Tu nombre" required>
+  <input type="email" name="email" placeholder="Tu correo electrónico" required>
+  <textarea name="mensaje" placeholder="Escribe tu mensaje..." required></textarea>
+
+  <!-- Redirección después del envío (opcional, solo si tienes gracias.html) -->
+  <input type="hidden" name="_redirect" value="https://grupo67-web.vercel.app/gracias.html">
+
+  <button type="submit">Enviar mensaje</button>
+</form>
+
   <p style="text-align: center; margin-bottom: 30px; font-size: 18px;">¿Tienes un proyecto en mente? Cuéntanoslo en segundos.</p>
 
   <form action="#" method="POST" class="formulario-visual">
