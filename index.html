@@ -134,52 +134,60 @@
 </section>
 
 
- <section id="contacto" class="contacto-mejorado">
-  <h2>Contáctanos</h2>
-  <form action="https://formspree.io/f/mqabjbdo" method="POST">
-  <input type="text" name="nombre" placeholder="Tu nombre" required>
-  <input type="email" name="email" placeholder="Tu correo electrónico" required>
-  <textarea name="mensaje" placeholder="Escribe tu mensaje..." required></textarea>
+<section id="contacto" style="padding: 60px 20px; background-color: #0b0f19; color: #f1f5f9;">
+  <div style="max-width: 1000px; margin: auto;">
+    <h2 style="text-align: center; font-size: 32px; margin-bottom: 40px;">Solicita tu presupuesto</h2>
 
-  <!-- Redirección después del envío (opcional, solo si tienes gracias.html) -->
-  <input type="hidden" name="_redirect" value="https://grupo67-web.vercel.app/gracias.html">
+    <form action="https://formspree.io/f/mqabjbdo" method="POST" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
 
-  <button type="submit">Enviar mensaje</button>
-</form>
-
-  <p style="text-align: center; margin-bottom: 30px; font-size: 18px;">¿Tienes un proyecto en mente? Cuéntanoslo en segundos.</p>
-
-  <form action="#" method="POST" class="formulario-visual">
-    <div class="campo-doble">
-      <div class="campo">
-        <label for="nombre">Tu nombre</label>
-        <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre..." required>
+      <div style="display: flex; flex-direction: column;">
+        <label for="nombre" style="margin-bottom: 8px;">Tu nombre</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Nombre completo" required
+          style="padding: 14px; border-radius: 8px; border: none; background-color: #1e1e2a; color: #fff;">
       </div>
-      <div class="campo">
-        <label for="email">Tu email</label>
-        <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
+
+      <div style="display: flex; flex-direction: column;">
+        <label for="email" style="margin-bottom: 8px;">Tu e-mail</label>
+        <input type="email" id="email" name="email" placeholder="Correo electrónico" required
+          style="padding: 14px; border-radius: 8px; border: none; background-color: #1e1e2a; color: #fff;">
       </div>
-    </div>
 
-    <div class="campo">
-      <label for="servicio">¿Qué servicio te interesa?</label>
-      <select id="servicio" name="servicio">
-        <option value="web">Página Web Corporativa</option>
-        <option value="tienda">Tienda Online</option>
-        <option value="personalizada">Diseño Personalizado</option>
-        <option value="informativa">Página Informativa Simple</option>
-        <option value="otro">Otro</option>
-      </select>
-    </div>
+      <div style="display: flex; flex-direction: column;">
+        <label for="servicio" style="margin-bottom: 8px;">¿Qué servicio necesitas?</label>
+        <select id="servicio" name="servicio" required
+          style="padding: 14px; border-radius: 8px; border: none; background-color: #1e1e2a; color: #fff;">
+          <option value="" disabled selected>Selecciona una opción</option>
+          <option value="Web corporativa">Web corporativa</option>
+          <option value="Tienda online">Tienda online</option>
+          <option value="Landing Page">Landing Page</option>
+          <option value="Blog personal">Blog personal</option>
+          <option value="Rediseño web">Rediseño web</option>
+          <option value="Otros">Otros</option>
+        </select>
+      </div>
 
-    <div class="campo">
-      <label for="mensaje">Cuéntanos más sobre tu proyecto</label>
-      <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe aquí..."></textarea>
-    </div>
+      <div style="display: flex; flex-direction: column; grid-column: span 2;">
+        <label for="mensaje" style="margin-bottom: 8px;">Cuéntanos más sobre tu proyecto</label>
+        <textarea id="mensaje" name="mensaje" placeholder="Escribe los detalles aquí..." required
+          style="padding: 14px; border-radius: 8px; border: none; background-color: #1e1e2a; color: #fff; min-height: 150px;"></textarea>
+      </div>
 
-    <button type="submit">Enviar mensaje</button>
-  </form>
+      <input type="hidden" name="_redirect" value="https://grupo67-web.vercel.app/gracias.html">
+
+      <div style="grid-column: span 2; text-align: center; margin-top: 20px;">
+        <button type="submit"
+          style="padding: 14px 30px; border: none; border-radius: 8px; background: linear-gradient(to right, #3b82f6, #6366f1); color: white; font-weight: bold; font-size: 16px; cursor: pointer; transition: transform 0.2s ease;">
+          Enviar solicitud
+        </button>
+      </div>
+
+    </form>
+  </div>
 </section>
+
+
+
+
 <!-- Sección de Testimonios -->
 <section id="testimonios" class="testimonios">
 <h2 style="color: #00bfff;">Valoraciones de nuestros clientes</h2>
@@ -214,17 +222,34 @@
     <button class="next">→</button>
   </div>
 
-  <!-- Formulario de valoración -->
-  <div class="valoracion-form">
-    <h3>Déjanos tu valoración</h3>
-    <form id="form-valoracion">
-      <input type="text" name="nombre" placeholder="Tu nombre (opcional)">
-      <textarea name="mensaje" placeholder="Tu opinión sobre Grupo 67..." required oninvalid="this.setCustomValidity('Por favor, escribe tu opinión.')" oninput="this.setCustomValidity('')"></textarea>
+  <section id="testimonios" style="padding: 60px 20px; background-color: #0b0f19; color: #f1f5f9;">
+  <div style="max-width: 800px; margin: auto;">
+    <h2 style="text-align: center; font-size: 32px; margin-bottom: 30px;">Déjanos tu valoración</h2>
 
-      <button type="submit">Enviar</button>
+    <form action="https://formspree.io/f/mqabjbdo" method="POST" style="display: flex; flex-direction: column; gap: 20px;">
+
+      <input type="hidden" name="_subject" value="Nueva valoración desde la web Grupo 67">
+
+      <label for="nombre">Tu nombre:</label>
+      <input type="text" id="nombre" name="nombre" placeholder="Nombre completo" required
+        style="padding: 12px; border-radius: 8px; border: none; background-color: #1e1e2a; color: #fff;">
+
+      <label for="valoracion">Tu valoración:</label>
+      <textarea id="valoracion" name="valoracion" placeholder="Escribe tu experiencia con nosotros..." required
+        style="padding: 12px; border-radius: 8px; border: none; background-color: #1e1e2a; color: #fff; min-height: 100px;"></textarea>
+
+      <input type="hidden" name="_redirect" value="https://grupo67-web.vercel.app/gracias.html">
+
+      <div style="text-align: center;">
+        <button type="submit"
+          style="padding: 12px 25px; border-radius: 8px; border: none; background: linear-gradient(to right, #3b82f6, #6366f1); color: white; font-weight: bold; font-size: 16px; cursor: pointer;">
+          Enviar valoración
+        </button>
+      </div>
     </form>
   </div>
 </section>
+
 
 
 <!-- Script -->
