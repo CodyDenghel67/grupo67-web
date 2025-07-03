@@ -692,3 +692,51 @@ blockquote {
 }
 
 
+/* Estilo unificado para los formularios de contacto y valoraciones */
+.formulario-seccion {
+  background-color: #0b0c2a; /* el color oscuro profundo que usa tu web */
+  padding: 60px 20px;
+  border-radius: 8px;
+  margin-bottom: 60px;
+  color: white;
+}
+
+.formulario-seccion h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #00cfff;
+  margin-bottom: 40px;
+}
+
+.formulario-seccion form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.formulario-seccion form > div {
+  grid-column: span 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.formulario-seccion input,
+.formulario-seccion select,
+.formulario-seccion textarea {
+  padding: 10px;
+  background-color: #161829;
+  color: white;
+  border: 1px solid #333;
+  border-radius: 4px;
+}
+
+.formulario-seccion button {
+  padding: 12px 30px;
+  background-color: #00cfff;
+  color: black;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
