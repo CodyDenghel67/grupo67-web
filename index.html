@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <link rel="icon" href="grupo67_favicon.ico" type="image/x-icon">
+
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Inter:wght@300;500&display=swap" rel="stylesheet">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grupo 67</title>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+</head>
+<body>
+  <!-- ANIMACIÓN DE ENTRADA GRUPO 67 -->
+<div id="intro-overlay">
+  <div class="intro-text">
+    <h1><span class="logo-arriba">GRUPO</span><br><span class="logo-abajo">67</span></h1>
+   <p class="subtitulo-animado">Diseñamos tu imagen digital desde cero</p>
+  </div>
+</div>
+
+  <header>
+    <h1><span class="logo-arriba">GRUPO</span><br><span class="logo-abajo">67</span></h1>
+    <p>Diseñamos tu imagen digital desde cero</p>
+  </header>
+
+ <nav>
+  <a href="#nosotros">¿Quiénes somos?</a>
+  <a href="#servicios">Servicios</a>
+  <a href="#contacto">Contacto</a>
+  <a href="#testimonios">Valoraciones</a>
+</nav>
+
+
+
+ <section id="nosotros" class="Servicios">
+  <h2>¿Quiénes somos?</h2>
+  <div style="display: flex; flex-wrap: wrap; gap: 40px; justify-content: space-between; align-items: center;">
+
+    <!-- Parte izquierda: texto -->
+    <div style="flex: 1 1 500px;">
+      <div class="bloque" style="padding: 20px; border-radius: 10px;">
+        <h3><span class="azul">Grupo 67</span> — visión, origen y valores</h3>
+        <p><strong>Cody Denghel</strong>, fundador de <span class="azul">Grupo 67</span>, creó esta empresa con un objetivo claro: acercar el diseño web profesional a cualquier persona o negocio, sin complicaciones ni precios absurdos.</p>
+        <p>Nacidos en España, en 2025, mezclamos lo mejor del diseño moderno con la seriedad y valores clásicos de una empresa tradicional. Nuestro enfoque es cercano, directo y transparente.</p>
+      </div>
+
+      <div class="bloque" style="padding: 20px; border-radius: 10px; margin-top: 30px;">
+        <h3>¿Por qué elegirnos?</h3>
+        <ul>
+          <li>✔️ Atención 100% personalizada desde el primer minuto.</li>
+          <li>✔️ <strong>Diseño a medida</strong>, sin plantillas recicladas.</li>
+          <li>✔️ <strong>Entrega rápida</strong> y soporte real.</li>
+          <li>✔️ <strong>Confianza, profesionalidad y trato humano.</strong></li>
+          <li>✔️ Todo lo que ves, lo hacemos nosotros. Desde cero.</li>
+        </ul>
+        <p><strong><span class="azul">Grupo 67</span></strong> no solo diseña webs. <br> Creamos imagen digital real y duradera.</p>
+      </div>
+    </div>
+
+    <!-- Parte derecha: video y logo -->
+    <div style="flex: 1 1 300px; text-align: center;">
+      <!-- Video (solo visible en PC) -->
+      <video class="ocultar-en-movil" autoplay muted loop playsinline preload="auto" style="max-width: 100%; border-radius: 10px; margin-bottom: 20px; display: block;">
+        <source src="videosgrupo67-intro.mp4" type="video/mp4" />
+        Tu navegador no soporta videos HTML5.
+      </video>
+
+      <!-- Logo (solo visible en PC) -->
+      <div class="bloque ocultar-en-movil">
+        <img src="logo-grupo67.png" alt="Logo Grupo 67" style="max-width: 200px; border-radius: 10px;">
+      </div>
+    </div>
+  </div>
+
+  <!-- Separador elegante -->
+  <hr style="border: none; height: 1px; background: linear-gradient(to right, transparent, #67ffcc, transparent); margin: 60px 0;" />
+</section>
+
+
+<section id="servicios" class="presupuestos" style="padding: 60px 20px;">
+  <h2 style="text-align: center; font-size: 32px; margin-bottom: 40px; color: #67ffcc;">Servicios</h2>
+
+  <div class="servicio">
+    <button onclick="toggleServicio('s1')">Servicio Nº1: Web corporativa</button>
+    <div class="contenido-servicio" id="s1">
+      <p>Una página web profesional para representar tu empresa o negocio. Diseñada desde cero, responsive, moderna y con todo lo necesario para mostrar quién eres.</p>
+      <p>
+        <span class="precio-anterior">Antes: 600€</span><br>
+        <span class="precio-actual">Ahora: desde 300€ hasta 500€</span><br>
+        <span class="rebaja">¡Ahorra hasta un 50%!</span>
+      </p>
+    </div>
+  </div>
+
+  <div class="servicio">
+    <button onclick="toggleServicio('s2')">Servicio Nº2: Tienda online</button>
+    <div class="contenido-servicio" id="s2">
+      <p>Crea tu propio e-commerce con catálogo de productos, carrito de compras y pasarela de pago. Ideal para vender en línea desde cualquier dispositivo.</p>
+      <p>
+        <span class="precio-anterior">Antes: 1200€</span><br>
+        <span class="precio-actual">Ahora: desde 800€ hasta 1000€</span><br>
+        <span class="rebaja">¡Ahorra hasta un 33%!</span>
+      </p>
+    </div>
+  </div>
+
+  <div class="servicio">
+    <button onclick="toggleServicio('s3')">Servicio Nº3: Web personalizada</button>
+    <div class="contenido-servicio" id="s3">
+      <p>Diseño 100% a medida para un proyecto único. Ideal si quieres algo diferente, con efectos especiales, funcionalidades propias y estilo original.</p>
+      <p>
+        <span class="precio-anterior">Antes: 1500€</span><br>
+        <span class="precio-actual">Ahora: desde 1000€ hasta 1200€</span><br>
+        <span class="rebaja">¡Ahorra hasta un 33%!</span>
+      </p>
+    </div>
+  </div>
+
+  <div class="servicio">
+    <button onclick="toggleServicio('s4')">Servicio Nº4: Página informativa simple</button>
+    <div class="contenido-servicio" id="s4">
+      <p>Una página sencilla de presentación con tu información básica. Ideal para mostrar contacto, ubicación, horarios o info puntual.</p>
+      <p>
+        <span class="precio-anterior">Antes: 400€</span><br>
+        <span class="precio-actual">Ahora: desde 200€ hasta 300€</span><br>
+        <span class="rebaja">¡Ahorra hasta un 50%!</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+
+ <section id="contacto" class="contacto-mejorado">
+  <h2>Contáctanos</h2>
+  <p style="text-align: center; margin-bottom: 30px; font-size: 18px;">¿Tienes un proyecto en mente? Cuéntanoslo en segundos.</p>
+
+  <form action="#" method="POST" class="formulario-visual">
+    <div class="campo-doble">
+      <div class="campo">
+        <label for="nombre">Tu nombre</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre..." required>
+      </div>
+      <div class="campo">
+        <label for="email">Tu email</label>
+        <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
+      </div>
+    </div>
+
+    <div class="campo">
+      <label for="servicio">¿Qué servicio te interesa?</label>
+      <select id="servicio" name="servicio">
+        <option value="web">Página Web Corporativa</option>
+        <option value="tienda">Tienda Online</option>
+        <option value="personalizada">Diseño Personalizado</option>
+        <option value="informativa">Página Informativa Simple</option>
+        <option value="otro">Otro</option>
+      </select>
+    </div>
+
+    <div class="campo">
+      <label for="mensaje">Cuéntanos más sobre tu proyecto</label>
+      <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe aquí..."></textarea>
+    </div>
+
+    <button type="submit">Enviar mensaje</button>
+  </form>
+</section>
+<!-- Sección de Testimonios -->
+<section id="testimonios" class="testimonios">
+<h2 style="color: #00bfff;">Valoraciones de nuestros clientes</h2>
+
+  <div class="slider">
+    <!-- Slide 1 -->
+    <div class="slide active tarjeta3d">
+      <div class="avatar">M</div>
+      <h3>Marta G.</h3>
+      <p>Tienda de cosmética natural</p>
+      <blockquote>Gracias a Grupo 67 mi web transmite justo lo que quería. ¡Buen servicio!</blockquote>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="slide tarjeta3d">
+      <div class="avatar">J</div>
+      <h3>Javier R.</h3>
+      <p>Entrenador personal</p>
+      <blockquote>Quería una web rápida y sencilla. Me la entregaron en pocos días. Servicio excelente.</blockquote>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="slide tarjeta3d">
+      <div class="avatar">L</div>
+      <h3>Laura M.</h3>
+      <p>Cafetería en Madrid</p>
+      <blockquote>Todo muy fácil. Ahora tengo una web moderna y bien hecha. ¡Gracias!</blockquote>
+    </div>
+
+    <!-- Flechas -->
+    <button class="prev">←</button>
+    <button class="next">→</button>
+  </div>
+
+  <!-- Formulario de valoración -->
+  <div class="valoracion-form">
+    <h3>Déjanos tu valoración</h3>
+    <form id="form-valoracion">
+      <input type="text" name="nombre" placeholder="Tu nombre (opcional)">
+      <textarea name="mensaje" placeholder="Tu opinión sobre Grupo 67..." required oninvalid="this.setCustomValidity('Por favor, escribe tu opinión.')" oninput="this.setCustomValidity('')"></textarea>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+</section>
+
+
+<!-- Script -->
+<script>
+  const slides = document.querySelectorAll('.slide');
+  let current = 0;
+
+  document.querySelector('.next').onclick = () => {
+    slides[current].classList.remove('active');
+    current = (current + 1) % slides.length;
+    slides[current].classList.add('active');
+  };
+
+  document.querySelector('.prev').onclick = () => {
+    slides[current].classList.remove('active');
+    current = (current - 1 + slides.length) % slides.length;
+    slides[current].classList.add('active');
+  };
+</script>
+
+
+<style>
+  .contacto-mejorado {
+    background: linear-gradient(to right, #0d0d0d, #1a1a2e);
+    padding: 60px 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0,191,255,0.2);
+  }
+
+  .formulario-visual {
+    max-width: 700px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .campo {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .campo label {
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #00bfff;
+  }
+
+  .campo input,
+  .campo textarea,
+  .campo select {
+    padding: 12px;
+    border: 1px solid #333;
+    border-radius: 8px;
+    font-size: 16px;
+    background: #1f1f1f;
+    color: white;
+  }
+
+  .campo-doble {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .campo-doble .campo {
+    flex: 1 1 200px;
+  }
+
+  button[type="submit"] {
+    background-color: #00bfff;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  button[type="submit"]:hover {
+    background-color: #009acd;
+  }
+
+  @media screen and (max-width: 768px) {
+    .campo-doble {
+      flex-direction: column;
+    }
+  }
+</style>
+
+
+
+
+  <script>
+  function toggleTexto(elemento) {
+    elemento.classList.toggle('abierto');
+  }
+</script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+
+<div style="text-align: center; margin-top: 40px; font-size: 0.8em; color: #777;">
+  <p>Web creada por <strong>Cody D.</strong> + Grupo 67</p>
+  <p><a href="legal.html" style="color: #888; text-decoration: none;">Aviso Legal y Política de Privacidad</a></p>
+</div>
+
+<script>
+  function toggleServicio(id) {
+    const target = document.getElementById(id);
+    target.style.display = (target.style.display === "block") ? "none" : "block";
+  }
+</script>
+
+<script>
+  // Por si quieres asegurarte que no se muestra más de la cuenta
+  setTimeout(() => {
+    const intro = document.getElementById('intro-overlay');
+    if (intro) intro.style.display = 'none';
+  }, 4000);
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const slides = document.querySelectorAll('.slide');
+    const prevBtn = document.querySelector('.prev');
+    const nextBtn = document.querySelector('.next');
+    let index = 0;
+
+    function showSlide(i) {
+      slides.forEach((slide, idx) => {
+        slide.classList.remove('active');
+        if (idx === i) slide.classList.add('active');
+      });
+    }
+
+    if (prevBtn && nextBtn && slides.length > 0) {
+      prevBtn.addEventListener('click', () => {
+        index = (index - 1 + slides.length) % slides.length;
+        showSlide(index);
+      });
+
+      nextBtn.addEventListener('click', () => {
+        index = (index + 1) % slides.length;
+        showSlide(index);
+      });
+
+      showSlide(index);
+    }
+  });
+</script>
+
+<script>
+  function toggleServicio(id) {
+    const box = document.getElementById(id);
+    box.style.display = box.style.display === "block" ? "none" : "block";
+  }
+</script>
+
+</body>
+</html>
