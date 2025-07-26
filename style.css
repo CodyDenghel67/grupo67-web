@@ -1188,3 +1188,57 @@ blockquote {
     display: none !important;
   }
 }
+@media screen and (max-width: 768px) {
+  /* 1. Eliminar hueco enorme después de ¿Quiénes somos? */
+  #nosotros {
+    padding-bottom: 10px !important;
+    margin-bottom: 0 !important;
+  }
+
+  #nosotros hr {
+    display: none;
+  }
+
+  /* 2. Reducir tipografía y espacio en "Servicios en Oferta..." */
+  #servicios h2 {
+    font-size: 1.5rem;
+    margin: 20px 0 10px 0;
+    line-height: 1.2;
+  }
+
+  #servicios .subtexto {
+    font-size: 0.9rem;
+    line-height: 1.3;
+    margin-bottom: 15px;
+  }
+
+  /* 3. Ajustes a tarjetas de servicios */
+  .contenedor-servicios {
+    padding-bottom: 20px;
+  }
+
+  .servicio {
+    min-height: auto !important;
+    margin-bottom: 8px !important;
+  }
+
+  .contenido-servicio {
+    padding-bottom: 12px;
+    margin-bottom: 0 !important;
+  }
+
+  /* 4. Espaciado horizontal más compacto */
+  .contenedor-servicios {
+    gap: 10px !important;
+    scroll-snap-type: x mandatory;
+  }
+
+  .servicio {
+    scroll-snap-align: start;
+  }
+
+  /* Ocultar mensaje “Solo para los 10 clientes” */
+  #servicios p:last-of-type {
+    display: none !important;
+  }
+}
