@@ -1156,3 +1156,35 @@ blockquote {
     z-index: 99998;
   }
 }
+
+@media screen and (max-width: 768px) {
+  /* Mostrar contenido de los servicios normales directamente */
+  #servicios .contenido-servicio {
+    display: block !important;
+    padding: 12px 14px;
+    font-size: 14px;
+    background: #0f0f0f;
+    color: white;
+    border-top: 1px solid #222;
+  }
+
+  #servicios .servicio button {
+    pointer-events: none;
+    opacity: 0.9;
+  }
+
+  /* Extras disponibles siguen siendo clicables */
+  #extras .servicio button {
+    pointer-events: auto;
+    opacity: 1;
+  }
+
+  #extras .contenido-servicio {
+    display: none;
+  }
+
+  /* Texto final de los 10 clientes oculto solo en móvil */
+  #servicios p:last-of-type {
+    display: none !important;
+  }
+}
