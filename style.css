@@ -945,300 +945,150 @@ blockquote {
   transform: translateY(0);
 }
 
+/* OCULTAR MENÚ HAMBURGUESA EN PC */
+@media screen and (min-width: 769px) {
+  .menu-movil,
+  .menu-icon,
+  .menu-desplegable {
+    display: none !important;
+  }
+}
+
+/* ======================= */
+/* 🎯 VERSIÓN MÓVIL FINAL 🎯 */
+/* ======================= */
 @media screen and (max-width: 768px) {
-
-  /* === ESTRUCTURA GENERAL === */
-  body {
-    overflow-x: hidden;
+  /* Ocultar todo lo de PC */
+  .main-nav,
+  header,
+  .hero,
+  .pc-only {
+    display: none !important;
   }
 
-  section {
-    padding: 30px 16px;
-  }
-
-  h2 {
-    font-size: 20px;
-    text-align: center;
-    margin-bottom: 20px;
-  }
-
-  /* === HEADER COMPACTO === */
-  header {
-    padding: 40px 10px 20px;
-    background-size: cover;
-    text-align: center;
-  }
-
-  .logo-arriba {
-    font-size: 26px;
-  }
-
-  .logo-abajo {
-    font-size: 42px;
-    text-shadow: 2px 2px 8px #00cfff;
-  }
-
-  p {
-    font-size: 14px;
-    line-height: 1.5;
-  }
-
-  /* === MENÚ HAMBURGUESA === */
-  .hamburger {
+  /* Mostrar menú hamburguesa */
+  .mobile-menu-icon {
+    display: flex !important;
     position: fixed;
     top: 15px;
     left: 15px;
-    font-size: 24px;
-    background: #1a1a1a;
-    color: #00cfff;
-    padding: 10px 14px;
+    z-index: 9999;
+    flex-direction: column;
+    gap: 4px;
+    background-color: #111;
+    padding: 8px;
     border-radius: 8px;
-    z-index: 10000;
-    cursor: pointer;
-    box-shadow: 0 0 10px rgba(0, 207, 255, 0.2);
+    box-shadow: 0 0 8px cyan;
   }
 
-  .sidebar {
-    position: fixed;
-    top: 0;
-    left: -250px;
-    width: 200px;
-    height: 100%;
-    background: #0d0d0d;
-    padding: 80px 20px;
+  .mobile-menu {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 70%;
+    height: 100%;
+    background-color: #000e1f;
     transition: left 0.3s ease;
-    z-index: 9999;
-    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.4);
+    z-index: 999;
+    padding: 70px 20px;
+    gap: 20px;
   }
 
-  .sidebar.open {
+  .mobile-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    border-bottom: 1px solid #ffffff22;
+    padding-bottom: 8px;
+  }
+
+  .mobile-menu.show {
     left: 0;
   }
 
-  .sidebar a {
+  .mobile-header {
+    position: relative;
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  #particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+
+  .mobile-logo {
+    position: relative;
+    z-index: 1;
+    width: 140px;
+    height: auto;
+  }
+
+  .mobile-section {
+    padding: 20px;
     color: white;
-    text-decoration: none;
-    font-size: 16px;
-    border-bottom: 1px solid #222;
-    padding-bottom: 6px;
   }
 
-  /* === BLOQUES QUIÉNES SOMOS + SERVICIOS === */
-  #nosotros .bloque {
-    background: #161616;
-    margin-bottom: 20px;
-    padding: 16px;
-    border-radius: 12px;
-    box-shadow: 0 0 10px rgba(0, 207, 255, 0.1);
-  }
-
-  .bloque h3 {
-    font-size: 16px;
+  .mobile-section h2 {
+    font-size: 22px;
+    color: #00e6ff;
     margin-bottom: 10px;
     text-align: center;
   }
 
-  .bloque p, ul li {
-    font-size: 14px;
+  .mobile-section p {
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: justify;
+    max-width: 95%;
+    margin: 0 auto;
+  }
+
+  .servicios-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 10px;
+  }
+
+  .servicio {
+    background: #111;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #00ffff55;
     text-align: center;
   }
 
-  ul li {
-    padding-left: 0;
-  }
-
-  ul li::before {
-    display: none;
-  }
-
-  /* === SERVICIOS EN SCROLL HORIZONTAL === */
-  #servicios {
-    display: flex;
-    overflow-x: auto;
-    gap: 14px;
-    scroll-snap-type: x mandatory;
-    padding-bottom: 20px;
-  }
-
-  #servicios .servicio {
-    flex: 0 0 85%;
-    scroll-snap-align: start;
-    border: 1px solid #333;
-    border-radius: 10px;
-    background: #121212;
-    padding: 0;
-    box-shadow: 0 0 15px rgba(0, 207, 255, 0.1);
-  }
-
-  .servicio button {
-    background: #00cfff;
-    color: black;
-    font-weight: bold;
-    font-size: 15px;
-    padding: 12px;
-    width: 100%;
-    border-radius: 10px 10px 0 0;
-  }
-
-  .contenido-servicio {
-    padding: 12px 14px;
-    font-size: 14px;
-    color: white;
-    background: #0e0e0e;
-  }
-
-  /* === FORMULARIO ADAPTADO === */
-  .form-card {
-    padding: 25px 15px;
-  }
-
-  .form-title {
+  .servicio h3 {
+    color: cyan;
+    margin-bottom: 8px;
     font-size: 18px;
-    margin-bottom: 20px;
   }
 
-  .input-group input,
-  .input-group textarea,
-  .input-group select {
-    font-size: 14px;
-    padding: 10px;
-  }
-
-  .btn-enviar {
-    width: 100%;
-    font-size: 15px;
-    padding: 14px;
-  }
-
-  /* === PARTICULAS OK === */
-  #starsCanvas {
-    display: block !important;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 0;
-    pointer-events: none;
-  }
-
-  /* OCULTAR ANIMACIÓN DE ENTRADA EN MÓVIL */
-  #intro-overlay {
-    display: none !important;
-  }
-}
-/* OCULTAR BOTÓN HAMBURGUESA EN PC */
-@media screen and (min-width: 769px) {
-  #mobile-menu-btn,
-  #mobile-sidebar {
-    display: none !important;
-  }
-}
-
-/* OCULTAR MENÚ DE ESCRITORIO EN MÓVIL */
-@media screen and (max-width: 768px) {
-  nav,
-  .main-nav {
-    display: none !important;
-  }
-
-  header {
-    padding-top: 50px; /* Reducido para no dejar espacio */
-  }
-
-  #mobile-menu-btn {
-    display: block;
-    z-index: 99999;
-  }
-
-  #mobile-sidebar {
-    z-index: 99998;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  /* Mostrar contenido de los servicios normales directamente */
-  #servicios .contenido-servicio {
-    display: block !important;
-    padding: 12px 14px;
-    font-size: 14px;
-    background: #0f0f0f;
+  .servicio p {
     color: white;
-    border-top: 1px solid #222;
+    font-size: 15px;
   }
 
-  #servicios .servicio button {
-    pointer-events: none;
-    opacity: 0.9;
-  }
-
-  /* Extras disponibles siguen siendo clicables */
-  #extras .servicio button {
-    pointer-events: auto;
-    opacity: 1;
-  }
-
-  #extras .contenido-servicio {
-    display: none;
-  }
-
-  /* Texto final de los 10 clientes oculto solo en móvil */
-  #servicios p:last-of-type {
-    display: none !important;
+  /* Ocultar bloque solo-movil en PC */
+  .solo-movil {
+    display: block;
   }
 }
-@media screen and (max-width: 768px) {
-  /* 1. Eliminar hueco enorme después de ¿Quiénes somos? */
-  #nosotros {
-    padding-bottom: 10px !important;
-    margin-bottom: 0 !important;
-  }
 
-  #nosotros hr {
-    display: none;
-  }
-
-  /* 2. Reducir tipografía y espacio en "Servicios en Oferta..." */
-  #servicios h2 {
-    font-size: 1.5rem;
-    margin: 20px 0 10px 0;
-    line-height: 1.2;
-  }
-
-  #servicios .subtexto {
-    font-size: 0.9rem;
-    line-height: 1.3;
-    margin-bottom: 15px;
-  }
-
-  /* 3. Ajustes a tarjetas de servicios */
-  .contenedor-servicios {
-    padding-bottom: 20px;
-  }
-
-  .servicio {
-    min-height: auto !important;
-    margin-bottom: 8px !important;
-  }
-
-  .contenido-servicio {
-    padding-bottom: 12px;
-    margin-bottom: 0 !important;
-  }
-
-  /* 4. Espaciado horizontal más compacto */
-  .contenedor-servicios {
-    gap: 10px !important;
-    scroll-snap-type: x mandatory;
-  }
-
-  .servicio {
-    scroll-snap-align: start;
-  }
-
-  /* Ocultar mensaje “Solo para los 10 clientes” */
-  #servicios p:last-of-type {
+@media screen and (min-width: 769px) {
+  .mobile-menu,
+  .mobile-menu-icon,
+  .mobile-header,
+  .solo-movil {
     display: none !important;
   }
 }

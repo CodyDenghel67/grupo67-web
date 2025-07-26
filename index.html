@@ -23,10 +23,16 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 </head>
-<!-- MENÚ HAMBURGUESA MÓVIL -->
-<div id="mobile-menu-btn" class="hamburger">☰</div>
 
-<div id="mobile-sidebar" class="sidebar">
+<!-- Ícono Hamburguesa -->
+<div class="mobile-menu-icon" onclick="document.querySelector('.mobile-menu').classList.toggle('show')">
+  <div style="width: 25px; height: 2px; background: cyan; margin: 5px 0;"></div>
+  <div style="width: 25px; height: 2px; background: cyan; margin: 5px 0;"></div>
+  <div style="width: 25px; height: 2px; background: cyan; margin: 5px 0;"></div>
+</div>
+
+<!-- Menú Móvil -->
+<div class="mobile-menu">
   <a href="#nosotros">¿Quiénes somos?</a>
   <a href="#servicios">Servicios</a>
   <a href="#contacto">Contacto</a>
@@ -35,6 +41,7 @@
 
 
 <body>
+
   <!-- ANIMACIÓN DE ENTRADA GRUPO 67 -->
 <div id="intro-overlay">
   <div class="intro-text">
@@ -97,6 +104,7 @@
 
   <!-- Separador elegante -->
   <hr style="border: none; height: 1px; background: linear-gradient(to right, transparent, #67ffcc, transparent); margin: 60px 0;" />
+
 </section>
 
 <!-- PARTICULAS FONDO -->
@@ -605,6 +613,17 @@ type();
 
   servicios.forEach(servicio => {
     observer.observe(servicio);
+  });
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const menu = document.querySelector('.mobile-menu');
+    const icon = document.querySelector('.mobile-menu-icon');
+
+    icon.addEventListener('click', () => {
+      menu.classList.toggle('show');
+    });
   });
 </script>
 
