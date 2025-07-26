@@ -945,3 +945,214 @@ blockquote {
   transform: translateY(0);
 }
 
+@media screen and (max-width: 768px) {
+
+  /* === ESTRUCTURA GENERAL === */
+  body {
+    overflow-x: hidden;
+  }
+
+  section {
+    padding: 30px 16px;
+  }
+
+  h2 {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  /* === HEADER COMPACTO === */
+  header {
+    padding: 40px 10px 20px;
+    background-size: cover;
+    text-align: center;
+  }
+
+  .logo-arriba {
+    font-size: 26px;
+  }
+
+  .logo-abajo {
+    font-size: 42px;
+    text-shadow: 2px 2px 8px #00cfff;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  /* === MENÚ HAMBURGUESA === */
+  .hamburger {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    font-size: 24px;
+    background: #1a1a1a;
+    color: #00cfff;
+    padding: 10px 14px;
+    border-radius: 8px;
+    z-index: 10000;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 207, 255, 0.2);
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 200px;
+    height: 100%;
+    background: #0d0d0d;
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transition: left 0.3s ease;
+    z-index: 9999;
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.4);
+  }
+
+  .sidebar.open {
+    left: 0;
+  }
+
+  .sidebar a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    border-bottom: 1px solid #222;
+    padding-bottom: 6px;
+  }
+
+  /* === BLOQUES QUIÉNES SOMOS + SERVICIOS === */
+  #nosotros .bloque {
+    background: #161616;
+    margin-bottom: 20px;
+    padding: 16px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 207, 255, 0.1);
+  }
+
+  .bloque h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .bloque p, ul li {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  ul li {
+    padding-left: 0;
+  }
+
+  ul li::before {
+    display: none;
+  }
+
+  /* === SERVICIOS EN SCROLL HORIZONTAL === */
+  #servicios {
+    display: flex;
+    overflow-x: auto;
+    gap: 14px;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 20px;
+  }
+
+  #servicios .servicio {
+    flex: 0 0 85%;
+    scroll-snap-align: start;
+    border: 1px solid #333;
+    border-radius: 10px;
+    background: #121212;
+    padding: 0;
+    box-shadow: 0 0 15px rgba(0, 207, 255, 0.1);
+  }
+
+  .servicio button {
+    background: #00cfff;
+    color: black;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 12px;
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .contenido-servicio {
+    padding: 12px 14px;
+    font-size: 14px;
+    color: white;
+    background: #0e0e0e;
+  }
+
+  /* === FORMULARIO ADAPTADO === */
+  .form-card {
+    padding: 25px 15px;
+  }
+
+  .form-title {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .input-group input,
+  .input-group textarea,
+  .input-group select {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .btn-enviar {
+    width: 100%;
+    font-size: 15px;
+    padding: 14px;
+  }
+
+  /* === PARTICULAS OK === */
+  #starsCanvas {
+    display: block !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  /* OCULTAR ANIMACIÓN DE ENTRADA EN MÓVIL */
+  #intro-overlay {
+    display: none !important;
+  }
+}
+/* OCULTAR BOTÓN HAMBURGUESA EN PC */
+@media screen and (min-width: 769px) {
+  #mobile-menu-btn,
+  #mobile-sidebar {
+    display: none !important;
+  }
+}
+
+/* OCULTAR MENÚ DE ESCRITORIO EN MÓVIL */
+@media screen and (max-width: 768px) {
+  nav,
+  .main-nav {
+    display: none !important;
+  }
+
+  header {
+    padding-top: 50px; /* Reducido para no dejar espacio */
+  }
+
+  #mobile-menu-btn {
+    display: block;
+    z-index: 99999;
+  }
+
+  #mobile-sidebar {
+    z-index: 99998;
+  }
+}

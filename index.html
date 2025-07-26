@@ -23,6 +23,17 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 </head>
+<!-- MENÚ HAMBURGUESA MÓVIL -->
+<div id="mobile-menu-btn" class="hamburger">☰</div>
+
+<div id="mobile-sidebar" class="sidebar">
+  <a href="#nosotros">¿Quiénes somos?</a>
+  <a href="#servicios">Servicios</a>
+  <a href="#contacto">Contacto</a>
+  <a href="#testimonios">Valoraciones</a>
+</div>
+
+
 <body>
   <!-- ANIMACIÓN DE ENTRADA GRUPO 67 -->
 <div id="intro-overlay">
@@ -598,4 +609,10 @@ type();
 </script>
 
 </body>
+<script>
+  document.getElementById('mobile-menu-btn').addEventListener('click', function () {
+    document.getElementById('mobile-sidebar').classList.toggle('open');
+  });
+</script>
+
 </html>
