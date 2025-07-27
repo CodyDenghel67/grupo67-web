@@ -138,77 +138,6 @@ ul li::before {
   left: 0;
 }
 
-/* ===== SECCIÓN SERVICIOS ===== */
-.servicio {
-  margin-bottom: 30px;
-  text-align: left;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: #1f1f1f;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 191, 255, 0.1);
-  overflow: hidden;
-  transition: box-shadow 0.3s ease;
-}
-
-.servicio button {
-  width: 100%;
-  background-color: #00bfff;
-  color: white;
-  font-size: 16px;
-  font-weight: bold;
-  padding: 12px 16px;
-  border: none;
-  border-radius: 0;
-  cursor: pointer;
-  text-align: left;
-  transition: background-color 0.3s ease;
-}
-
-.servicio button:hover {
-  background-color: #007acc;
-}
-
-.contenido-servicio {
-  display: none;
-  padding: 15px 20px;
-  font-size: 14px;
-  line-height: 1.6;
-  background-color: #0d0d0d;
-  color: #ffffff;
-}
-
-/* Precios llamativos */
-.precio-anterior {
-  color: #ff4d4d;
-  font-weight: bold;
-  text-decoration: line-through;
-  font-size: 16px;
-}
-
-.precio-actual {
-  color: #67ffcc;
-  font-weight: bold;
-  font-size: 18px;
-  display: block;
-  margin-top: 5px;
-  transition: transform 0.2s ease, color 0.2s ease;
-}
-
-.precio-actual:hover {
-  transform: scale(1.05);
-  color: #00ffaa;
-}
-
-.rebaja {
-  color: #ffd700;
-  font-weight: bold;
-  font-size: 16px;
-  margin-top: 4px;
-  display: inline-block;
-  transition: transform 0.2s ease;
-}
 
 .rebaja:hover {
   transform: scale(1.05);
@@ -216,110 +145,6 @@ ul li::before {
 
 
 
-
-/* ===== PRECIOS ===== */
-.precio-anterior {
-  color: #ff4d4d; /* rojo fuerte */
-  text-decoration: line-through;
-  font-weight: bold;
-  font-size: 16px;
-}
-
-.precio-actual {
-  color: #00ffaa; /* verde flúor llamativo */
-  font-weight: bold;
-  font-size: 18px;
-  display: block;
-  margin-top: 5px;
-  transition: transform 0.2s ease, color 0.2s ease;
-}
-
-.rebaja {
-  color: #ffcc00; /* amarillo brillante */
-  font-weight: bold;
-  font-size: 16px;
-  margin-top: 4px;
-  display: inline-block;
-  transition: transform 0.2s ease;
-}
-
-
-.formulario-section {
-  background-color: #0e0e0e;
-  padding: 60px 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.form-card {
-  background-color: #101010;
-  padding: 40px;
-  border-radius: 16px;
-  max-width: 800px;
-  width: 100%;
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
-  color: white;
-}
-
-.form-title {
-  text-align: center;
-  font-size: 2rem;
-  color: #00cfff;
-  margin-bottom: 40px;
-}
-
-.input-group {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 20px;
-}
-
-.input-group label {
-  margin-bottom: 6px;
-  color: #ccc;
-}
-
-.input-group input,
-.input-group textarea,
-.input-group select {
-  background-color: #161829;
-  color: white;
-  border: 1px solid #333;
-  border-radius: 8px;
-  padding: 12px;
-  font-size: 16px;
-  transition: all 0.3s ease;
-}
-
-.input-group input:focus,
-.input-group textarea:focus,
-.input-group select:focus {
-  border-color: #00cfff;
-  outline: none;
-  box-shadow: 0 0 10px rgba(0, 207, 255, 0.3);
-}
-
-.form-submit {
-  text-align: center;
-  margin-top: 20px;
-}
-
-.btn-enviar {
-  padding: 12px 30px;
-  background-color: #00cfff;
-  color: #000;
-  border: none;
-  border-radius: 10px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.btn-enviar:hover {
-  background-color: #00b6e2;
-  transform: scale(1.03);
-}
 
 
 /* ===== ANIMACIONES EN SCROLL ===== */
@@ -334,52 +159,7 @@ ul li::before {
   transform: translateY(0);
 }
 
-/* ===== RESPONSIVE ===== */
-@media screen and (max-width: 768px) {
-  .logo-arriba {
-    font-size: 36px;
-  }
 
-  .logo-abajo {
-    font-size: 60px;
-  }
-
-  nav a {
-    display: block;
-    margin: 10px 0;
-  }
-
-  section {
-    padding: 40px 10px;
-  }
-
-  .servicio button {
-    font-size: 15px;
-    padding: 10px;
-  }
-
-  .contenido-servicio {
-    font-size: 14px;
-  }
-
-  .bloque {
-    padding: 16px;
-  }
-
-  .ocultar-en-movil {
-    display: none !important;
-  }
-
-  section#nosotros div {
-    flex-direction: column !important;
-    text-align: center;
-  }
-
-  section#nosotros img {
-    margin: 0 auto;
-    max-width: 70%;
-  }
-}
 
 /* ANIMACIÓN DE ENTRADA */
 #intro-overlay {
@@ -442,25 +222,6 @@ ul li::before {
     opacity: 1;
   }
 }
-
-.servicio {
-  background-color: #ffffff;
-  border: 1px solid #e2e2e2;
-  border-radius: 12px;
-  margin-bottom: 20px;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.03);
-  overflow: hidden;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-  transform: perspective(1000px) rotateX(3deg) rotateY(3deg) scale(0.95);
-  transform-style: preserve-3d;
-}
-
-.servicio:hover {
-  transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1);
-box-shadow: 0 0 25px rgba(0, 102, 95, 0.25);
-
-}
-
 
 
 .servicio button {
@@ -726,66 +487,7 @@ blockquote {
   font-weight: bold;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-5px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
-
-/* Estilo unificado para los formularios de contacto y valoraciones */
-.formulario-seccion {
-  background-color: #0b0c2a; /* el color oscuro profundo que usa tu web */
-  padding: 60px 20px;
-  border-radius: 8px;
-  margin-bottom: 60px;
-  color: white;
-}
-
-.formulario-seccion h2 {
-  text-align: center;
-  font-size: 2rem;
-  color: #00cfff;
-  margin-bottom: 40px;
-}
-
-.formulario-seccion form {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  max-width: 900px;
-  margin: auto;
-}
-
-.formulario-seccion form > div {
-  grid-column: span 2;
-  display: flex;
-  flex-direction: column;
-}
-
-.formulario-seccion input,
-.formulario-seccion select,
-.formulario-seccion textarea {
-  padding: 10px;
-  background-color: #161829;
-  color: white;
-  border: 1px solid #333;
-  border-radius: 4px;
-}
-
-.formulario-seccion button {
-  padding: 12px 30px;
-  background-color: #00cfff;
-  color: black;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-}
 
 .formulario-section {
   background-color: #0e0e0e;
@@ -887,12 +589,6 @@ blockquote {
   to   { opacity: 1; transform: translateY(0); }
 }
 
-/* Ocultar en móvil */
-@media screen and (max-width: 768px) {
-  .ocultar-en-movil {
-    display: none;
-  }
-}
 
 /* Ocultar en móvil */
 @media (max-width: 768px) {
@@ -954,19 +650,234 @@ blockquote {
   }
 }
 
-/* ======================= */
-/* 🎯 VERSIÓN MÓVIL FINAL 🎯 */
-/* ======================= */
+
+/* SOLO AFECTA A MÓVIL */
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  /* Animación de entrada DESACTIVADA en móvil */
+  #intro-animation {
+    display: none !important;
+  }
+
+  /* Header con partículas, estrellas y logo */
+  header {
+    background: #000;
+    position: relative;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #00bfff;
+    font-size: 1.8em;
+    font-weight: bold;
+    text-shadow: 0 0 10px #00bfff;
+  }
+
+  /* Partículas flotantes (puedes personalizar más esto con JavaScript o canvas si usas librerías) */
+  .particles-js-canvas-el {
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  /* Menú hamburguesa arriba a la izquierda */
+  .mobile-menu-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 999;
+    cursor: pointer;
+  }
+
+  .mobile-menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 75%;
+    height: 100%;
+    background: #111;
+    color: white;
+    padding: 40px 20px;
+    transition: 0.3s ease;
+    z-index: 9999;
+  }
+
+  .mobile-menu.open {
+    left: 0;
+  }
+
+  .mobile-menu a {
+    display: block;
+    color: white;
+    margin: 20px 0;
+    text-decoration: none;
+    font-size: 1.2em;
+  }
+
+  /* Redes sociales */
+  .social-links {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white;
+    font-size: 0.8em;
+    text-align: right;
+    z-index: 999;
+  }
+
+  .social-links img {
+    height: 20px;
+    margin-right: 5px;
+    vertical-align: middle;
+  }
+
+  /* Secciones compactas */
+  #nosotros, #servicios, #contacto, #testimonios {
+    padding: 30px 15px;
+    font-size: 0.95em;
+    line-height: 1.4em;
+  }
+
+  /* Tarjetas de servicio como en PC */
+  .servicio-box {
+    background: #111;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #00bfff55;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .servicio-box:hover {
+    transform: scale(1.02);
+    background-color: #191919;
+  }
+
+  .servicio-box p {
+    display: none;
+  }
+
+  .servicio-box.active p {
+    display: block;
+    margin-top: 10px;
+  }
+
+  /* Scroll suave */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Footer atractivo */
+  footer {
+    background: #080808;
+    color: white;
+    text-align: center;
+    padding: 30px 10px;
+    font-size: 0.9em;
+    border-top: 1px solid #222;
+  }
+
+  footer a {
+    color: #00bfff;
+    text-decoration: none;
+  }
+}
+
+
+/* Añadido: animación mínima y ordenada para .servicio */
+.servicio {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.servicio.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animación en hover para destacar sutilmente */
+.servicio:hover {
+  box-shadow: 0 0 15px rgba(0, 191, 255, 0.2);
+  transform: scale(1.02);
+}
+
+/* ===== RESPONSIVE UNIFICADO ===== */
 @media screen and (max-width: 768px) {
-  /* Ocultar todo lo de PC */
+  /* TITULOS */
+  h1 {
+    font-size: 28px;
+  }
+  h2 {
+    font-size: 22px;
+    line-height: 1.2;
+    word-break: break-word;
+    text-align: center;
+  }
+  h3 {
+    font-size: 18px;
+  }
+  .form-title, .seccion-titulo {
+    font-size: 24px;
+    line-height: 1.2;
+    word-break: break-word;
+  }
+
+  /* LOGOS */
+  .logo-arriba {
+    font-size: 36px;
+  }
+  .logo-abajo {
+    font-size: 60px;
+  }
+
+  /* NAVBAR */
+  nav a {
+    display: block;
+    margin: 10px 0;
+  }
+
+  /* SECCIONES Y BLOQUES */
+  section {
+    padding: 40px 10px;
+  }
+  .bloque {
+    padding: 16px;
+  }
+  .contenido-servicio {
+    font-size: 14px;
+  }
+  .servicio button {
+    font-size: 15px;
+    padding: 10px;
+  }
+  section#nosotros div {
+    flex-direction: column !important;
+    text-align: center;
+  }
+  section#nosotros img {
+    margin: 0 auto;
+    max-width: 70%;
+  }
+
+  /* OCULTAR ELEMENTOS EN MÓVIL */
+  .ocultar-en-movil,
+  .bloque-logo-animado,
   .main-nav,
-  header,
   .hero,
   .pc-only {
     display: none !important;
   }
 
-  /* Mostrar menú hamburguesa */
+  /* MENÚ MÓVIL */
   .mobile-menu-icon {
     display: flex !important;
     position: fixed;
@@ -1065,6 +976,14 @@ blockquote {
     border-radius: 10px;
     box-shadow: 0 0 10px #00ffff55;
     text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-in-out;
+  }
+
+  .servicio.visible {
+    opacity: 1;
+    transform: translateY(0);
   }
 
   .servicio h3 {
@@ -1078,17 +997,39 @@ blockquote {
     font-size: 15px;
   }
 
-  /* Ocultar bloque solo-movil en PC */
   .solo-movil {
     display: block;
   }
+
+  .typing-container {
+    font-size: 20px;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
 }
 
+/* ===== RESPONSIVE ESCRITORIO ===== */
 @media screen and (min-width: 769px) {
   .mobile-menu,
   .mobile-menu-icon,
   .mobile-header,
-  .solo-movil {
+  .solo-movil,
+  .menu-movil,
+  .menu-icon,
+  .menu-desplegable,
+  .mobile-menu a[href="#quienes-somos"] {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header:not(.mobile-header),
+  nav:not(.mobile-menu),
+  .main-nav,
+  .menu-principal,
+  .menu-escritorio {
     display: none !important;
   }
 }
